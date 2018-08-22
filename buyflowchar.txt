@@ -1,0 +1,17 @@
+title 인게임배너샵 상품 구매 처리
+
+Client -> Zone : 거래 요청
+Zone -> World : 레드젠 사용 처리 요청
+World -> FCS : 레드젠 차감 예약 요청
+FCS -> World : 레드젠 차감 예약 응답
+World -> Zone : 인게임배너 아이템 구매 처리
+Zone -> DBAgent : 거래 정보 저장 및 생성 아이템 저장 및 구매 처리 요청
+DBAgent -> Zone : 응답(성공)
+Zone -> World : 레드젠 차감 완료 요청
+World -> FCS : 레드젠 차감 완료 요청
+FCS -> World : 레드젠 차감 완료 응답
+World -> World : 거래 정보 삭제
+World -> Zone : 거래 완료 알림
+Zone -> Client : 거래 결과 통보
+
+
