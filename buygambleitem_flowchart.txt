@@ -1,0 +1,19 @@
+title 겜블 아이템 구매 ( with Fcs )
+
+Client -> Zone : EReqUseGambleItem
+Zone -> Zone : UseGambleItem()
+Zone -> Zone : baseGambleItem()
+Zone -> Zone : ItemGambleTransaction()
+Zone -> World : EReqDbItemGambleTransaction
+World -> World : onReqDbItemTransaction()
+World -> World : onWshopEvent()
+World -> World : AddTask( WShopTaskItemTransaction )
+World -> Fcs : IRequestPurchaseJewelItem
+Fcs -> World : IResponsePurchaseJewelItem
+World -> DBAgent : EReqDbItemGambleTransaction
+DBAgent -> World : EResDbItemTransaction
+World -> Fcs : IRequestConfirmJewelPurchase
+Fcs -> World : IResponseConfirmJewelPurchase
+World -> Zone : EResDbItemTransaction
+Zone -> Zone : ItemGambleTransaction::CommitTransaction
+Zone -> Client : EResUseGamebleItem
