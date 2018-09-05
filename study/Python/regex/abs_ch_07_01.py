@@ -67,3 +67,16 @@ mo9_1 = haRegex9.search('HaHaHa')
 print(mo9_1.group())
 mo9_2 = haRegex9.search('Ha')
 print( 'The Match is None : {}'.format(mo9_2 == None) )
+
+# different Greedy and Nongreedy
+
+greedyHaRegex = re.compile(r'(Ha){3,5}')
+mo10 = greedyHaRegex.search('HaHaHaHaHa')
+print( 'Greedy Match : ', + mo10.group())
+
+
+nongreedyHaRegex = re.compile(r'(Ha){3,5}?')
+mo11 = nongreedyHaRegex.search('HaHaHaHaHa')
+print( 'Nongreedy match : ' + mo11.group())
+
+
