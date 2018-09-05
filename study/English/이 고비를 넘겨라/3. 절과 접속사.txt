@@ -1,0 +1,89 @@
+#3 절과 접속사
+
+The District of Columbia and the city of Washington are coextensive 
+and are governed by a single municipal government, so for most 
+practical purpose they are considered to be the same entity.
+
+
+콜롬비아 특별구역과 워싱턴은 동일한 공간에 걸쳐 위치하고 있으며 하나의 시 행정부에 의해
+다스려지고 있기 때문에 대부분의 실제적 목적에 있어서 동일한 독립체로 여겨지고 있습니다.
+
+1. 절
+1) 절이란? - 주어와 서술어가 있는 단어 덩이
+2) 절의 종류와 역할
+    - 주절
+    - 종속절 ( 언제나 접속사 뒤에 온다. 보통 절이 2개 보이면 접속사 뒤에 보이는 절이 종속절이라고 보면 된다. )
+    (1) 명사절 ( 문장속에서 주어/목적어/보어 역할 )
+    (2) 부사절 ( 명사, 형용사 역할을 제외한 나머지 역할. 이유, 시간, 조건, 목적 등의 의미를 가짐 )
+    (3) 형용사절 ( 명사를 꾸며주는 역할 )
+
+    - Whether you like her or not is not an issue here.
+    - I know that you love me.
+    - My phone is that he will come back soon.
+    - Because I woke up early this morning, I feel sleepy.
+    - I've decided to be a carpenter when I grow up.
+    - If you miss it, you will regret it.
+    - THis is a blouse which I bought last week.
+    - This is a room where I met him.
+
+    - I strongly recommend that you read this book.
+    - Seoul is a city which I want to visit.
+    - If it rains tomorrow, we will stay at home.
+
+
+2. 접속사
+1) 접속사란? - 단어와 단어, 구와 구, 절과 절을 연결시켜주는 단어
+2) 접속사의 종류
+    (1) 등위 접속사 ( 단어와 단어, 구와 구, 절과 절 )
+    - and, but, or, so
+
+    - Pizzas and pastas are on the menu.
+    - You may send the resume by mail or by fax.
+    - I am sorry, but I love you.
+    - He had homework, so he stayed up late to finish it.
+    - She was in the classroom, and he went there to see her.
+
+    (2) 상관 접속사 - 서로 상관하는 것들을 연결시켜 주는 접속사 ( 숙어의 형태 )
+    - both A and B(A와 B 둘 다), either A or B(A 또는 B), neither A nor B(A도 아니고 B도 아닌),
+      not only A but also B (A뿐만아니라 B도), B as well as A (A뿐만 아니라 B도), not A but B(A가 아니라 B)
+    - both A and B는 복수 동사를 사용하고, 나머지는 핵주어 B에 맞춰 동사를 사용한다.
+
+    - Both Pizza and Pastas are on the menu.
+    - You may send the resume either by fax or by mail.
+    - Neither he nor you are responsible for this situation.
+    - I did not only my homework, but I also cleaned the room.
+    - He as well as I love you.
+    - Life is not about speed but about direction.
+      
+    (3) 종속 접속사 - 대등하지 않은 절과 절을 연결
+    - whether(if), that, wh-로 시작하는 의문사 ( when, what, where, who, why)
+      because, although, if, while, before, after, even if
+    
+    - I don't know if he will come.
+
+* 종속절의 종류
+- It is certain that he is innocent.
+- The weather forecast said that there would be rain today.
+- I wonder if/whether you like this sweater.
+- Who said it is important to me.
+- I can't understand what he said.
+- I have the belief that you will achieve your dream someday.
+- 'Superman returns' is a movie which I like the most.
+- Seoul is a city where I spent my childhood.
+- When he came home, I turned on the TV to watch the show.
+- I missed the bus because I got up late in the morning.
+- Although it was freezing outside, it was warm inside thanks to the heating system.
+- I will wait for you if you promise to come.
+- While I was having breakfast, my sister overslept herself and skipped breakfast.
+
+정리
+- 절 
+-- 주절 : S + V
+-- 종속절 : 종속 접속사 + S + V
+    - 명사절 ( 주어, 목적어, 보어 역할 )
+    - 형용사절 = 관계사절 ( 명사 수식 역할 )
+    - 부사절 ( 잡절 )
+- 접속사
+-- 등위접속사
+-- 상관접속사
+-- 종속 접속사 ( 종속절을 이끈다 )

@@ -28,4 +28,11 @@
 - People invited to my birthday party were my colleagues.
 - Anyone who likes to play tennis is encouraged to join our tennis club.
 - Whether we will finish on time depends on the situation.
-긴 주어를 가진 문장
+    b. 긴 주어를 가진 문장
+        - 핵주어를 구가 수식하는 문장
+            People invited to my birthday party were my colleagues.
+        - 핵주어를 절이 수식하는 문장
+            Anyone who likes to play tennis is encouraged to join our tennis club.
+        - 주어가 절 자체인 문장
+            Whether we will finish it on time depends on the situation.
+            
