@@ -51,27 +51,3 @@ os.path.exists('D:\\')
 # 1. File = open(path[, r/w/a])
 # 2. File.read(stirng) or File.write(string)
 # 3. File.close()
-
-# shelve 모듈 사용 예>
-import shelve
-
-
-
-
-
-
-shelfFile = shelve.open('mydata')
-print(type(shelfFile))
-shelfFile['cats']
-['Zophie', 'Pooka', 'Simon']
->>> shelfFile.close()
-
-
->> import pprint
->>> cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}]
->>> pprint.pformat(cats)
-"[{'desc': 'chubby', 'name': 'Zophie'}, {'desc': 'fluffy', 'name': 'Pooka'}]"
->>> fileObj = open('myCats.py', 'w')
->>> fileObj.write('cats = ' + pprint.pformat(cats) + '\n')
-83
->>> fileObj.close()
