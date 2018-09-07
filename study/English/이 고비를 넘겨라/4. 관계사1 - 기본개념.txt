@@ -1,0 +1,114 @@
+
+# 정리
+1. 한 문장 안에는 언제나 핵심 동사가 하나다.
+2. 그러나 등위 접속사나 상관 접속사로 동사들이 연결된 문장은 핵심 동사가 두개 이상일 수 있다.
+3. 등위 접속사나 상관 접속사가 아닌 종속 접속사로 연결될 때에는 주절의 동사가 문장의 핵심 동사이다.
+   * 종속절의 동사는 문장의 핵심 동사가 아니므로 주의 한다.
+4. 종속절의 종류에는 명사절, 형용사절(=관계사절), 부사절이 있다.
+
+01. 관계사란?
+    두 문장(절)을 연결하고 싶은데 두 문장속에 공통 분모(선행사)가 들어가 있는 경우에 사용한다.
+     
+    I know Elizabeth. Mark wants to have pizza for lunch.
+    -> I know Elizabeth and Mark wants to have pizza for lunch ( 등위 접속사 and )
+    I know Elizabeth. Elizabeth wants to have pizza for lunch.
+    -> I know Elizabeth and Elizabeth wants to have pizza for lunch.
+    * Elizabeth와 같은 공통 분모를 '선행사'라고 한다.
+    -> I know Elizabeth who wants to have pizza for lunch.
+
+02. 관계사의 종류
+1) 관계 대명사 = 관계사(접속사) + 명사
+    접속사와 대명사, 두가지 역할을 한단어가 하는것.
+
+    Language is a tool. The tool links us to people around the world.
+    -> Language is a tool and the tool links us to people around the world.
+    -> Language is a tool which links us to people around the world.
+    * which는 and + tool 역할을 하고 있다.
+
+    I remember the people. We met people in Paris.
+    -> I remember the people and We met people in Paris.
+    -> I remember the people who(m) whe met in Paris.
+    * who(m)은 and + the people
+
+    위의 두 문장의 차이점은 
+    1. 대명사의 역할 (주어위치, 목적어위치)
+    2. 관계 대명사의 쓰임 ( 선행사가 사람인지, 사물인지)
+
+    선행사      사람        사람/사물       사물/동물
+    주격        who        that        which   
+    목적격      who(m)      that        which
+    소유격      whose       -           whose, of which
+
+    He is my teacher. He bought this cake for me.
+    -> He is my teacher [who/that] bought this cake for me.
+    It is a movie. Everybody likes this movie.
+    -> It is a movie [that/which] everybody likes.
+    She is my sister. Her bag was stolen.
+    -> She is my sister whose bag was stolen.
+
+    1. Sumin is a student. She wants to be a singer.
+    -> Sumin is a student who wants to be a singer.
+    -> Sumin who wants to be a singer is a student.
+        수민이가 학생이라는 거이 더 강조되는 문장.
+    * Sumin = a student = She 이기 때문에 Sumin 또는 a student 둘다 가능
+    2. The director needs a pen. The pen is necessary for note taking.
+    -> The director needs a pen [that/which] is necessary for note taking.
+    3. People read books. People want to acquire knowledge.
+    -> People who want to aquire knowledge read books.
+    4. My dream is to help homeless people. I want to achieve my dream.
+    -> My dream which(=that) I want to achieve is to help homeless people.
+    5. Doctors can cure diseases. Many people suffer from diseases.
+    -> Doctors can cure diseases which(=that) many people suffer from.
+    6. Jisu sowed flower seeds. My mom gave me flower seeds to plant.
+    -> Jisu sowed flower seeds which(=that) my mom gave me to plant.
+    7. I have a brother. My brother's hobby is to play soccer.
+    -> I have a brother whose hobby is to play soccer.
+    8. This is a magazine. The cover of the magazie attracts its subscribers.
+    -> This is a magazine the cover of which attracts its subscribers.
+    9. It is my dog. Its eyes are beautiful.
+    -> It is my dog whose eyes are beautiful.
+    
+* 관계 대명사절을 포함한 문장을 해석하는 법
+1. 관계 대명사절이 선행사인 명사를 꾸며 주는 의미가 되도록 해석하고, 
+2. 머리가 커진 명사를 전체 문장에 맞춰(명사가 주어가되면 주어!, 목적어면 목적어!) 해석해주면 된다.
+* 관계 대명사절이 꾸미는 선행사(명사)를 한 덩이로 묶으면서 문장을 해석해 주면 된다.
+
+    "D.C." stands for the "District of Columbia" and it(=District of Columbia) is 
+    the federal district containing the city of Washington.
+    -> "D.C." stands for the "District of Columbia" which is the federal
+        district containing the city of Washington.
+
+2) 관계 부사 = 관계사(접속사)+부사
+    관계 부사는 접속사와 부사, 두가지 역할을 하는 한개의 단어
+    * 전치사 + 관계 대명사 = 관계 부사
+
+    We need a place. We can stay for a few days at that place.
+    -> We need a place and we can stay for a few days at that place.
+    -> We need a place which we can stay for a few days at.
+    -> We need a place where(=at which) we can stay for a few days.
+
+    It was a crisis. She was totally unprepared for this crisis.
+    -> It was a crisis and she was totally unprepared for this crisis.
+    -> It was a crisis which she was totally unprepared for.
+    -> It was a crisis for which whe was totally unprepared.
+    * 선행사가 시간(the time = when), 장소(the place = where), 
+      이유(the reason = why), 방법(the way = how)에 해당되지 않으면 관계부사를 사용할 수 없다.
+
+    I don't know the reason. My license was canceled for that reason.
+    -> I don't know the reason why My license was canceled.
+    Tomorrow is Saturday. We will go swimming on Saturday.
+    -> Tomorrow is Saturday when we will go swimming.
+    This is the room. I met you in this room.
+    -> This is the room where I met you.
+
+* 선행사에 따른 관계사 사용법
+선행사가 사람 또는 사물이면 관계대명사를 쓰고
+선행사가 시간, 장소, 이유, 방법이면 관계부사를 쓴다.
+관계 대명사를 사용한 문장의 남은 절은 완정하지 않은 모습이고,
+관계 부사를 사용한 문장의 남은 절은 완전한 모습이다.
+
+test.
+This is the house [which/where] he built.
+This is the house [which/where] I was born.
+We live in a time [which/when] people are obsessed with their appearance.
+There are several aspects [that/when] affects the functioning of the brain at work.

@@ -1,0 +1,74 @@
+01 관계대명사 what
+* what = 선행사를 포함한 관계 대명사
+* 역할 : 선행사 + 접속사 + 대명사
+- what = 선행사 + { 관계 대명사 (= 접속사 + 대명사 ) }
+- what절은 명사절에 해당하고 명사절은 주어, 목적어, 보어의 역할.
+
+Schubert just produced music. And music was in him, and he brought us a rich treasure of music.
+-> Schubert just produced music which(= And music) was in him, and he brought us a rich treasure of music.
+-> Schubert just produced what was in him, and he brought us a rich treasure of music.
+
+Faith is believing the thing. And we cannot prove it.
+-> Faith is believing the thing which we cannot prove.
+-> Faith is believing what we cannot prove.
+* 믿음은 우리가 증명할 수 엇는 것을 믿는 것이다.
+
+I remember the people who(m) we met in Paris.
+-> 선행사가 사람인 경우 what으로 변경할 수 없다.
+Language is a tool which links us to people around the world.
+-> Language is what links us to people around the world.
+
+What(= The thing which) I want to do in the future is to teach students English.
+Reading novels is what(= the thing which) I enjoy most.
+
+02 전치사 + 관계 대명사
+* 선행사에 따라서 관계 부사가 될 수 있느냐가 결정 된다.
+
+This is thy gym. I like to work out at the gym.
+-> This is the gym which I like to work out at.
+-> This is the gym where I like to work out.
+
+I am working for the store. I bought a T-shirt in this store.
+-> I am working for the store which I bought T-shirt in.
+-> I am working for the store where I bought T-shirt.
+
+* 전치사 + that을 사용할 수 없다.
+This is the gym that I like to work out at. ( O )
+This is the gym at that I like to work out. ( X )
+
+03 관계 대명사 앞 콤마(,)
+1) 계속적 용법 ( 콤마 사용 : 접속사 + 대명사로 해석 )
+2) 한정적 용법 ( 콤마 없음 : 관계 대명사절이 선행사를 수식하도록 해석 )
+
+I dropped the cup, which knocked over the eggs, whitch went all over the kitchen floor.
+-> 나는 컵을 떨어뜨렸고, 그 컵은 달걀 위에 떨어졌고, 그 달걀들이 깨져서 부엌 바닥이 난장판이 되었다.
+I like the song which you are singing now.
+-> 내가 지금 부르고 있는 그 노래를 나는 줗아한다.
+* 관계 대명사 that 앞에는 콤마(,)를 사용할 수 없다.
+
+03 생략이 가능한 관계사
+1) 목적격 관계 대명사
+    - 목적격 관계 대명사는 문장에서 생략 가능 
+2) 주격 관계 대명사 + be 동사
+    - 주격 관계 대명사는 뒤에 be 동사와 함께 쓰일 때, 둘이 함께 생략 가능 ( 둘정에 하나만 생략은 불가 )
+3) 관계 부사의 생략
+    - 관계 부사를 사용할 때 선행사나 관계 부사 중 하나를 생략하여 쓸수도 있다.
+
+The man (whom) I marry will have a good sense of humor.
+I am watching the man (who is) wearing a funny cap.
+I don't know the reason why my license was canceled.
+I don't know the reason my license was canceled.
+I don't know why my license was canceled.
+Tomorrow is Saturday when we will go swimming.
+Tomorrow is Saturday we will go swimming.
+Tomorrow is when we will go swimming.
+This is the room where I met you.
+This is the room I met you.
+This is where I met you.
+
+예외 - the way와 how는 같이 쓸 수 없다. 둘중에 하나만 가능
+Internet is changing the way. People shop in this way.
+Internet is changing the way in which people shop.
+Internet is changing how people shop. ( O )
+Internet is changing the way people shop. ( O )
+Internet is changing the way how people shop. ( X )
