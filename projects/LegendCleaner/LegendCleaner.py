@@ -1,33 +1,56 @@
 import configparser
 import os
 import re
-import time
 import datetime
 
 fileName = 'config.ini'
 root = 'd:\\'
 keep_days = 7
 filters = ['\.([0-9]){4}-([0-9]){2}-([0-9]){2}','\.([0-9]){8}-([0-9]){6}\.([0-9]){1,5}']
-cleanDir = ['Crash', 'profile']
+cleanDir = ['crash', 'profile'] # 소문자로 입력해서 비교
 
-def checkRemove(fullname, filter):
-    basename = os.path.basename(fullname)
-    regex = re.compile( filter)    
-    match = regex.search(basename)
-    if( match == None ):
-        return False
-    else :
-        # 파일이 수정된 날짜가 keep_days 보다 이전인 데이터는 삭제한다.
-        current = datetime.datetime.now() - datetime.timedelta(days=keep_days)       
-        filetime = datetime.datetime.fromtimestamp(os.path.getmtime(fullname))
+def CheckAndRemoveByDate(fullname):
+    current = datetime.datetime.now() - datetime.timedelta(days=keep_days)       
+    filetime = datetime.datetime.fromtimestamp(os.path.getmtime(fullname))
+    if (filetime < current):        
+        try:
+            os.remove(fullname)
+            print('Delete ' + fullname)
+        except PermissionError:
+            print('PermissionError ' + fullname)
 
-        #print ((time.ctime(os.path.getmtime(fullname)))
-        #print (filetime +'<'+ current)
-        print (filetime < current)
-        return (filetime < current)
+def CheckRegexFile(fullname):
+    for filter in filters:
+        basename = os.path.basename(fullname)
+        regex = re.compile( filter)    
+        match = regex.search(basename)
+        if match != None:
+            return True    
+    return False
 
+# 해당 디렉토리의 오래된 파일들을 삭제한다.
+def CleanOutdatedFiles(targetDir, useFilter):
+    try:
+        filenames = os.listdir(targetDir)
+        for filename in filenames:
+            full_filename = os.path.join(targetDir, filename)
+            if useFilter == True:
+                # 정규 표현식 필터 확인 대상
+                if os.path.isdir(full_filename):
+                    CleanOutdatedFiles(full_filename, not (filename.lower() in cleanDir))
+                else:
+                    if CheckRegexFile( full_filename ):
+                        CheckAndRemoveByDate(full_filename)
+            else:
+                # 모든 파일 대상 
+                if os.path.isdir(full_filename):
+                    CleanOutdatedFiles(full_filename, False)                    
+                else:
+                    CheckAndRemoveByDate(full_filename)
+    except PermissionError:
+        pass
 
-def makeSampleConfig(pathdir, polders):    
+def makeSampleConfig(pathdir, folders):    
     config = configparser.ConfigParser()
     config.read(fileName)    
     config.set(config.default_section, 'ROOT', root)
@@ -37,38 +60,12 @@ def makeSampleConfig(pathdir, polders):
     configfile = open(filename, 'w')
     config.write(configfile)
 
-def CleanSubPath(basePath):
-    # for entry in os.listdir(os.path.dirname(basePath)):
-    #     if( entry.is_dir() ):
-    #         print(entry)
-    try:
-        filenames = os.listdir(basePath)
-        for filename in filenames:
-            full_filename = os.path.join(basePath, filename)
-            if os.path.isdir(full_filename):                
-                if filename in cleanDir:
-                    print('remove dir : ' + full_filename)
-                else:                
-                    CleanSubPath(full_filename)
-            else:
-                for ff in filters:
-                    if( checkRemove(full_filename, ff) == True ):
-                        print(full_filename)
-    except PermissionError:
-        pass
-        # if( entry.is_dir() ):   
-        #     print (entry.name)                 
-        #     CleanSubPath(os.path.join(basePath,entry.name), fileExts)                
-        # else:
-        #     CleanFile(os.path.join(basePath,entry.name), fileExts)
-
-
 if __name__ == "__main__":
     # 셋팅 파일 저장
     # if(os.path.exists(os.path.join(os.getcwd(),fileName))==False):
     #     makeSampleConfig()        
 
-    CleanSubPath(os.getcwd())
+    CleanOutdatedFiles(os.getcwd(), True)
     # input('press any key ...')
     #config = configparser.ConfigParser()
     #config.read("config.ini")
