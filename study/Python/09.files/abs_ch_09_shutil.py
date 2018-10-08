@@ -49,6 +49,7 @@ send2trash.send2trash('bacon.txt')
 
 
 # 대상 디렉토리의 하위 디렉토리까지 모두 돌면서 확인.
+# for문 하나에서... 대단 os.walk.
 for folderName, subfolders, filenames in os.walk('..'):
     print('The current folder is ' + folderName)
     for subfolder in subfolders:
@@ -56,3 +57,22 @@ for folderName, subfolders, filenames in os.walk('..'):
     for filename in filenames:
         print('FILE INSIDE ' + folderName + ': '+ filename)
     print('')
+
+
+import zipfile
+print(os.getcwd())
+
+# zip 파일로 압축하기
+name = os.path.basename(os.getcwd()))
+
+newZip = zipfile.ZipFile('../new.zip'.format(), 'w')
+
+
+# for folderName, subfolders, filenames in os.walk('.'):
+#     print('The current folder is ' + folderName)
+#     for subfolder in subfolders:
+#         print('SUBFOLDER OF ' + folderName + ': ' + subfolder)
+#     for filename in filenames:
+#         print('FILE INSIDE ' + folderName + ': '+ filename)
+#     print('')
+# newZip.write()
