@@ -10,10 +10,12 @@ keep_days = 7
 filters = ['\.([0-9]){4}-([0-9]){2}-([0-9]){2}','\.([0-9]){8}-([0-9]){6}\.([0-9]){1,5}']
 folders = ['crash', 'profile'] # 소문자로 입력해서 비교
 logFile = 'LegendCleaner'
+logFileRe=''
 console_out = False
 
+
 def CheckAndRemoveByDate(fullname):
-    current = datetime.datetime.now() - datetime.timedelta(days=keep_days)       
+    current = datetime.datetime.now() - datetime.timedelta(days=int(keep_days))
     filetime = datetime.datetime.fromtimestamp(os.path.getmtime(fullname))
     if (filetime < current):        
         try:
@@ -71,6 +73,7 @@ def loadConfig():
     global folders
     global logFile
     global console_out
+    global logFileRe
 
     config = configparser.RawConfigParser()
     config.read(fileName)
@@ -78,12 +81,13 @@ def loadConfig():
     strLogFile = config.get('Config', 'logfile')
     now = datetime.datetime.now()
     nowDate = now.strftime('%Y-%m-%d')
-    logFile = strLogFile + nowDate + '.log'    
+    logFile = strLogFile.strip() + nowDate + '.log'
+    logFileRe = strLogFile.strip() + '([ 0-9-:])+\.log'
 
     strFilters = config.get('Config', 'filters')
-    filters = strFilters.split(';')
+    filters = strFilters.strip().split(';')
     strFolders = config.get('Config', 'folders')
-    folders = strFolders.split(';')
+    folders = strFolders.strip().split(';')
     keep_days = config.get('Config', 'keep_days')
     root = config.get('Config', 'root')
     console_out = config.getboolean('Config', 'console_out')
@@ -93,9 +97,9 @@ def loadConfig():
     Output('root=' + str(root))
     Output('console_out='+str(console_out))
     Output('keep_days=' + str(keep_days))    
-    Output('filters='+str(strFilters))
-    Output('folders='+str(strFolders))
-    Output('logFile='+strLogFile)
+    Output('filters='+str(strFilters.strip()))
+    Output('folders='+str(strFolders.strip()))
+    Output('logFile='+strLogFile.strip())
     Output('************************************')
     
 def Output(obj):
@@ -115,5 +119,7 @@ if __name__ == "__main__":
         makeSampleConfig()        
 
     loadConfig()
+
+    filters.append(logFileRe)
 
     CleanOutdatedFiles(os.getcwd(), True)
