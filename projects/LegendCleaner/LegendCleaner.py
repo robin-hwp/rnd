@@ -6,11 +6,11 @@ import re
 import datetime
 import pprint
 
-fileName = 'config.ini'
+configFile = 'LegendCleaner.ini'
 root = '.'
 keep_days = 7
 filters = ['\.([0-9]){4}-([0-9]){2}-([0-9]){2}','\.([0-9]){8}-([0-9]){6}\.([0-9]){1,5}']
-folders = ['crash', 'profile'] # 소문자로 입력해서 비교
+folders = ['x64\\crash', 'x64\\profile'] # 소문자로 입력해서 비교
 logFile = 'LegendCleaner'
 logFileRe=''
 console_out = False
@@ -37,7 +37,7 @@ def CheckRegexFile(fullname):
 
 def CheckCleanFolder(target):
     for folder in folders:
-        if target.find(folder) != -1 :
+        if folder in target :
             return True
 
     return False
@@ -63,7 +63,7 @@ def makeSampleConfig():
     config.set('Config', 'root', root)
     config.set('Config', 'logfile', logFile)
     config.set('Config', 'console_out', console_out)
-    with open(fileName, 'w') as configfile:
+    with open(configFile, 'w') as configfile:
         config.write(configfile)
 
 def loadConfig():
@@ -75,7 +75,7 @@ def loadConfig():
     global logFileRe
 
     config = configparser.RawConfigParser()
-    config.read(fileName)
+    config.read(configFile)
 
     strLogFile = config.get('Config', 'logfile')
     now = datetime.datetime.now()
@@ -114,7 +114,7 @@ def Output(obj):
 
 if __name__ == "__main__":
     # 셋팅 파일 저장
-    if(os.path.exists(os.path.join(os.getcwd(),fileName))==False):
+    if(os.path.exists(os.path.join(os.getcwd(),configFile))==False):
         makeSampleConfig()        
 
     loadConfig()
