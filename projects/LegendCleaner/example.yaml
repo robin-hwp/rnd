@@ -1,0 +1,220 @@
+﻿# ServerId 할당 방식
+# [월드번호(3)][서버타입(1)][번호(2)]
+# 서버 타입
+#     WorldServer   : 1
+#     ZoneServer    : 2
+#     DBAgent       : 3
+#     LogServer     : 4
+#     Bridge	    : 5
+#     CenterServer  : 사용하지 않음 ( 6 )
+#     LoginServer   : 7
+#     GMS           : 8
+
+# 포트번호 할당 방식 (listen, public)
+#     CenterServer  :  6666      X
+#     Bridge	    :  6500      X 
+#     LoginServer   :  10001    1001
+#     WorldServer   :  1101     20000 
+#     DBAgent       :  1401     X
+#     LogServer     :  1501     X 
+#     ZoneServer    :  1301    2301   
+
+
+
+# 센터서버 정보     
+CenterServer:
+    Listen: 10.103.17.14:6666
+    UseWorldList: false
+    LiveServer: false
+    BlockDevOnly: false
+    UseFcsAdapter: false
+    ServiceRegion: KR
+    PreCreateEvent : false
+    MaxConnect : 1000
+
+# 브릿지서버 정보     	 	
+BridgeServers:
+    - BridgeServer:
+        UseBridgeServer: true
+        WorldMatch: true
+        MaxConnect : 1000
+        BindInfo:
+          -  BindingWorlds: 10.103.17.14:6500, 1, 2
+    
+#점검중	상태에서 접속가능 IP리스트. 
+DevTestAllowIP:
+    - IP: 218.234.76.200 ~ 218.234.76.254
+    - IP: 218.234.76.155
+    
+# 로그인서버 정보     	 
+LoginServers:
+  - LoginServer:
+        Listen: 10.103.17.14:10001 
+        Public: 10.103.17.14:1001 
+
+
+# 계정 데이터베이스 정보     	 		  	  	
+AccountDatabase:
+    SQLServer:		    10.101.157.5,8522
+    Driver:			    SQL Server Native Client 10.0
+    User:			    m2
+    Password:		    webzen@2
+    AutoTranslate:	    No
+    Database:		    Mu2Account_QA
+
+# Wops 데이터베이스 정보     	 		  	  		
+WopsDatabase:
+    SQLServer:		    10.101.157.5,8522
+    Driver:			    SQL Server Native Client 10.0
+    User:			    m2
+    Password:		    webzen@2
+    AutoTranslate:	    No
+    Database:		     Mu2WOPS
+
+# Mu2Conn log 데이터베이스 정보     	 		  	  		
+ConnLogDatabase:
+    SQLServer:		    10.101.157.5,8522
+    Driver:			    SQL Server Native Client 10.0
+    User:			    m2
+    Password:		    webzen@2
+    AutoTranslate:	    No
+    Database:		     Mu2Conn
+
+# 피시방 정보     	 		  	  				
+UsePCRoom:
+    Using : false 
+    PcRoomServer : 218.234.76.83:45674
+    GameCode: 1368
+    ServerType: 1367	
+
+
+# 모든 월드 정보 
+WorldGroupList:				
+    - WorldGroup:
+        Name: QA1
+        WorldId: 1
+        MaxUser: 1000
+        MaxJoinWaitUser: 100
+        WarType: 0
+        InitCharLevel: 1
+        Channels: channels.yaml
+        UseKISS:  			false 
+        UseGameGuard: 		false 
+        UseVisualDebug: 	false 
+        UseLuaLogMessage:   false  
+        UseLogServer: 		false
+        NewServer: false
+        EventServer: false
+        UseWopsEvent: false
+        MinGridSize: 4000
+        WorldKey: 01
+        TournamentZoneBindInfo: 3
+        TournamentZoneSeperate: true
+        RegisterExchangeItemTime_Start : 2017-07-18 11:00:00
+        RegisterExchangeItemTime_End : 2017-11-30 11:00:00
+
+        WorldServer:
+            Listen:	10.103.17.14:1101
+            Public:	10.103.17.14:20000
+            
+        AppChatServer:
+            Listen: 10.103.17.14:6379
+
+        DBAServer:
+            Listen:	10.103.17.14:1401
+            SQLServer:  10.101.157.5,8522
+            Driver:     SQL Server Native Client 10.0
+            User:       m2
+            Password:   webzen@2
+            AutoTranslate: 	No
+            Database:        Mu2Game_QA
+            RunnerCount: 16
+            ExchangeItemRunnerCount: 8
+        
+        LogServer: 
+            Listen:    10.103.17.14:1501
+            SQLServer: 10.101.157.5,8522
+            Driver:    SQL Server Native Client 10.0
+            User:      m2
+            Password:  webzen@2
+            AutoTranslate: 	No
+            ConnLogDb: Mu2Conn
+            GameLogDb: Mu2GLog
+        
+        ZoneServers:
+            - ZoneServer:
+                Listen:	10.103.17.14:1301
+                Public: 10.103.17.14:2301
+                seq: 11
+            - ZoneServer:
+                Listen:	10.103.17.14:1302
+                Public: 10.103.17.14:2302
+                seq: 12
+            - ZoneServer:
+                Listen:	10.103.17.14:1303
+                Public: 10.103.17.14:2303
+                seq: 13
+    - WorldGroup:
+        Name: QA2
+        WorldId: 2
+        MaxUser: 1000
+        MaxJoinWaitUser: 100
+        WarType: 0
+        InitCharLevel: 1
+        Channels: channels.yaml
+        UseKISS:  			false 
+        UseGameGuard: 		false 
+        UseVisualDebug: 	false 
+        UseLuaLogMessage:   false  
+        UseLogServer: 		false
+        NewServer: false
+        EventServer: false
+        UseWopsEvent: false
+        MinGridSize: 4000
+        WorldKey: 02
+        TournamentZoneBindInfo: 3
+        TournamentZoneSeperate: true
+        RegisterExchangeItemTime_Start : 2017-07-18 11:00:00
+        RegisterExchangeItemTime_End : 2017-11-30 11:00:00
+
+        WorldServer:
+            Listen:	10.103.17.14:1121
+            Public:	10.103.17.14:20020
+            
+        AppChatServer:
+            Listen: 10.103.17.14:6379
+
+        DBAServer:
+            Listen:	10.103.17.14:1421
+            SQLServer:  10.101.157.5,8522
+            Driver:     SQL Server Native Client 10.0
+            User:       m2
+            Password:   webzen@2
+            AutoTranslate: 	No
+            Database:        Mu2Game_QA
+            RunnerCount: 16
+            ExchangeItemRunnerCount: 8
+        
+        LogServer: 
+            Listen:    10.103.17.14:1521
+            SQLServer: 10.101.157.5,8522
+            Driver:    SQL Server Native Client 10.0
+            User:      m2
+            Password:  webzen@2
+            AutoTranslate: 	No
+            ConnLogDb: Mu2Conn
+            GameLogDb: Mu2GLog
+        
+        ZoneServers:
+            - ZoneServer:
+                Listen:	10.103.17.14:1321
+                Public: 10.103.17.14:2321
+                seq: 21
+            - ZoneServer:
+                Listen:	10.103.17.14:1322
+                Public: 10.103.17.14:2322
+                seq: 22
+            - ZoneServer:
+                Listen:	10.103.17.14:1323
+                Public: 10.103.17.14:2323
+                seq: 23
