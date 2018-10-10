@@ -1,5 +1,3 @@
-
-
 import configparser
 import os
 import re
@@ -35,22 +33,25 @@ def CheckRegexFile(fullname):
             return True    
     return False
 
-def CheckCleanFolder(target):
-    for folder in folders:
-        if target.find(folder) != -1 :
-            return True
-
-    return False
-
 # 해당 디렉토리의 오래된 파일들을 삭제한다.
-def CleanOutdatedFiles(targetDir):
+def CleanOutdatedFiles(targetDir, useFilter):
     try:
-        for dirpath, dirnames, filenames in os.walk(targetDir):
-            force = CheckCleanFolder(dirpath)
-            for filename in filenames:
-                if force or CheckRegexFile(filename):
-                    CheckAndRemoveByDate(dirpath + '\\' + filename)
-
+        filenames = os.listdir(targetDir)
+        for filename in filenames:
+            full_filename = os.path.join(targetDir, filename)
+            if useFilter == True:
+                # 정규 표현식 필터 확인 대상
+                if os.path.isdir(full_filename):
+                    CleanOutdatedFiles(full_filename, not (filename.lower() in folders))
+                else:
+                    if CheckRegexFile( full_filename ):
+                        CheckAndRemoveByDate(full_filename)
+            else:
+                # 모든 파일 대상 
+                if os.path.isdir(full_filename):
+                    CleanOutdatedFiles(full_filename, False)                    
+                else:
+                    CheckAndRemoveByDate(full_filename)
     except PermissionError:
         pass
 
@@ -84,9 +85,9 @@ def loadConfig():
     logFileRe = strLogFile.strip() + '([ 0-9-:])+\.log'
 
     strFilters = config.get('Config', 'filters')
-    filters = strFilters.strip().lower().split(';')
+    filters = strFilters.strip().split(';')
     strFolders = config.get('Config', 'folders')
-    folders = strFolders.strip().lower().split(';')
+    folders = strFolders.strip().split(';')
     keep_days = config.get('Config', 'keep_days')
     root = config.get('Config', 'root')
     console_out = config.getboolean('Config', 'console_out')
@@ -96,8 +97,8 @@ def loadConfig():
     Output('root=' + str(root))
     Output('console_out='+str(console_out))
     Output('keep_days=' + str(keep_days))    
-    Output('filters='+str(strFilters.strip().lower()))
-    Output('folders='+str(strFolders.strip().lower()))
+    Output('filters='+str(strFilters.strip()))
+    Output('folders='+str(strFolders.strip()))
     Output('logFile='+strLogFile.strip())
     Output('************************************')
     
@@ -119,6 +120,6 @@ if __name__ == "__main__":
 
     loadConfig()
 
-    filters.append(logFileRe.lower())
+    filters.append(logFileRe)
 
-    CleanOutdatedFiles(root)
+    CleanOutdatedFiles(os.getcwd(), True)
